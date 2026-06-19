@@ -1,1 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Assistência Familiar — Cabo de Santo Agostinho/PE</title>
+<meta name="description" content="Clínica Assistência Familiar — atendimento médico humanizado no Cabo de Santo Agostinho. Pediatria, Ginecologia, Obstetrícia, Clínica Médica, Psiquiatria e Medicina do Trabalho.">
+<meta name="robots" content="index, follow">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#2a2a2a;line-height:1.65;background:#fff;font-size:16px}
+a{color:#2a6f6f;text-decoration:none}
+a:hover{text-decoration:underline}
 
+.container{max-width:980px;margin:0 auto;padding:0 24px}
+
+header{background:#fff;border-bottom:1px solid #eaeaea;padding:20px 0}
+header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.brand{color:#1a4747;font-weight:600;font-size:17px;letter-spacing:.2px}
+.brand span{color:#7a8a8a;font-weight:400;font-size:13px;display:block;margin-top:2px}
+nav ul{list-style:none;display:flex;gap:28px;flex-wrap:wrap}
+nav a{color:#3a3a3a;font-size:14px;font-weight:500}
+nav a:hover{color:#2a6f6f;text-decoration:none}
+
+.hero{padding:80px 0 70px;background:#f7f9f9;border-bottom:1px solid #eaeaea}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:36px;color:#1a4747;font-weight:700;line-height:1.2;margin-bottom:18px;letter-spacing:-.3px}
+.hero p{font-size:16px;color:#4a4a4a;margin-bottom:28px;max-width:520px}
+.btn{display:inline-block;background:#1a4747;color:#fff;padding:14px 28px;border-radius:4px;font-weight:600;font-size:15px;border:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:#2a6f6f;text-decoration:none;color:#fff}
+.btn-outline{background:transparent;color:#1a4747;border:1.5px solid #1a4747;margin-left:10px}
+.btn-outline:hover{background:#1a4747;color:#fff}
+.hero-art{display:flex;justify-content:center;align-items:center}
+.hero-art svg{width:100%;max-width:340px;height:auto}
+
+section{padding:70px 0}
+.section-label{font-size:12px;color:#2a6f6f;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+section h2{font-size:28px;color:#1a4747;font-weight:700;margin-bottom:14px;letter-spacing:-.2px}
+section .lead{color:#5a5a5a;font-size:16px;max-width:640px;margin-bottom:42px}
+
+.especialidades{background:#fff}
+.esp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid #eaeaea}
+.esp{padding:28px 0;border-bottom:1px solid #eaeaea;display:flex;gap:18px;align-items:flex-start}
+.esp:nth-child(odd){padding-right:24px;border-right:1px solid #eaeaea}
+.esp:nth-child(even){padding-left:24px}
+.esp-num{font-size:13px;color:#2a6f6f;font-weight:700;min-width:24px;padding-top:4px}
+.esp-body h3{font-size:17px;color:#1a4747;font-weight:600;margin-bottom:6px}
+.esp-body p{font-size:14px;color:#5a5a5a;line-height:1.55}
+
+.agendar{background:#f7f9f9;border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea}
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:12px}
+.passo{padding:24px 0}
+.passo-num{font-size:36px;color:#2a6f6f;font-weight:700;line-height:1;margin-bottom:14px;font-family:Georgia,serif}
+.passo h3{font-size:16px;color:#1a4747;font-weight:600;margin-bottom:8px}
+.passo p{font-size:14px;color:#5a5a5a}
+
+.faq-list{margin-top:8px;border-top:1px solid #eaeaea}
+.faq-item{border-bottom:1px solid #eaeaea;padding:20px 0}
+.faq-item h3{font-size:16px;color:#1a4747;font-weight:600;margin-bottom:8px}
+.faq-item p{font-size:14px;color:#5a5a5a;line-height:1.6}
+
+.contato{background:#f7f9f9;border-top:1px solid #eaeaea}
+.contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:8px}
+.contato-block h3{font-size:15px;color:#1a4747;font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.contato-block p{font-size:14px;color:#3a3a3a;line-height:1.7;margin-bottom:6px}
+.contato-block a{color:#2a6f6f}
+
+footer{background:#1a4747;color:#cfdcdc;padding:48px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.footer-col h4{color:#fff;font-size:14px;font-weight:600;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.footer-col p,.footer-col li{font-size:13px;line-height:1.7;color:#cfdcdc;margin-bottom:4px}
+.footer-col ul{list-style:none}
+.footer-col a{color:#cfdcdc}
+.footer-col a:hover{color:#fff}
+.footer-legal{border-top:1px solid #2a5757;padding:18px 0;font-size:12px;color:#9eb0b0;text-align:center}
+
+@media (max-width:768px){
+  .hero{padding:50px 0 40px}
+  .hero h1{font-size:26px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-art{order:-1;max-width:200px;margin:0 auto}
+  section{padding:50px 0}
+  section h2{font-size:22px}
+  .esp-grid{grid-template-columns:1fr}
+  .esp:nth-child(odd){padding-right:0;border-right:none}
+  .esp:nth-child(even){padding-left:0}
+  .passos{grid-template-columns:1fr;gap:16px}
+  .contato-grid{grid-template-columns:1fr;gap:28px}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+  nav ul{gap:18px}
+  .btn-outline{margin-left:0;margin-top:8px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="brand">
+      Clínica Assistência Familiar
+      <span>Cabo de Santo Agostinho — PE</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <h1>A clínica que cuida da sua família.</h1>
+        <p>Atendimento médico ambulatorial no Cabo de Santo Agostinho, com equipe multidisciplinar e foco em acolhimento, escuta e acompanhamento próximo.</p>
+        <a href="#agendar" class="btn">Agendar Consulta</a>
+        <a href="#especialidades" class="btn btn-outline">Ver Especialidades</a>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" fill="#e6efef" stroke="#1a4747" stroke-width="1.5"/>
+          <path d="M100 60 L100 140 M60 100 L140 100" stroke="#1a4747" stroke-width="14" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="48" fill="none" stroke="#2a6f6f" stroke-width="2" stroke-dasharray="3 5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container">
+    <div class="section-label">Sobre a Clínica</div>
+    <h2>Cuidar da família é estar presente em cada fase da vida.</h2>
+    <p class="lead">A Clínica Assistência Familiar oferece atendimento médico ambulatorial particular no Centro do Cabo de Santo Agostinho, em Pernambuco. Nossa proposta é simples: unir experiência clínica e atendimento humano, com escuta atenta, organização e respeito ao tempo de cada paciente.</p>
+    <p class="lead">Atendemos pacientes de todas as idades, em diversas especialidades, sempre com agendamento prévio para garantir que cada consulta receba a atenção necessária.</p>
+  </div>
+</section>
+
+<section id="especialidades" class="especialidades">
+  <div class="container">
+    <div class="section-label">Especialidades</div>
+    <h2>Conheça as especialidades que atendemos.</h2>
+    <p class="lead">Atendimento ambulatorial particular em diversas áreas, sempre com profissionais dedicados ao cuidado integral.</p>
+    <div class="esp-grid">
+      <div class="esp">
+        <div class="esp-num">01</div>
+        <div class="esp-body">
+          <h3>Pediatria</h3>
+          <p>Acompanhamento do crescimento e desenvolvimento, orientações de rotina e cuidados gerais da criança e do adolescente.</p>
+        </div>
+      </div>
+      <div class="esp">
+        <div class="esp-num">02</div>
+        <div class="esp-body">
+          <h3>Ginecologia e Obstetrícia</h3>
+          <p>Saúde da mulher, consultas de rotina e acompanhamento em todas as fases da vida.</p>
+        </div>
+      </div>
+      <div class="esp">
+        <div class="esp-num">03</div>
+        <div class="esp-body">
+          <h3>Clínica Médica</h3>
+          <p>Atendimento geral do adulto, avaliação clínica e acompanhamento de condições crônicas.</p>
+        </div>
+      </div>
+      <div class="esp">
+        <div class="esp-num">04</div>
+        <div class="esp-body">
+          <h3>Psiquiatria</h3>
+          <p>Avaliação, diagnóstico e acompanhamento em saúde mental, com cuidado integral e sigiloso.</p>
+        </div>
+      </div>
+      <div class="esp">
+        <div class="esp-num">05</div>
+        <div class="esp-body">
+          <h3>Medicina do Trabalho</h3>
+          <p>Avaliações ocupacionais conforme necessidade do paciente ou da empresa.</p>
+        </div>
+      </div>
+      <div class="esp">
+        <div class="esp-num">06</div>
+        <div class="esp-body">
+          <h3>Perícia Médica</h3>
+          <p>Realização de perícias médicas com profissional habilitado, conforme demanda.</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:28px;font-size:13px;color:#7a7a7a;font-style:italic">Observação: exames e procedimentos complementares são orientados pelo médico responsável conforme cada caso.</p>
+  </div>
+</section>
+
+<section id="agendar" class="agendar">
+  <div class="container">
+    <div class="section-label">Como Agendar</div>
+    <h2>Marque sua consulta em três passos.</h2>
+    <p class="lead">Processo simples e direto. Atendemos com agendamento prévio para evitar espera desnecessária.</p>
+    <div class="passos">
+      <div class="passo">
+        <div class="passo-num">01</div>
+        <h3>Escolha a especialidade</h3>
+        <p>Identifique a especialidade ou o tipo de atendimento que você precisa entre as opções disponíveis.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">02</div>
+        <h3>Entre em contato</h3>
+        <p>Ligue ou envie e-mail informando nome completo, especialidade desejada e sua disponibilidade.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">03</div>
+        <h3>Confirme a consulta</h3>
+        <p>Nossa equipe confirma o horário disponível e envia as orientações para o seu atendimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-label">Perguntas Frequentes</div>
+    <h2>Dúvidas mais comuns.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Como faço para agendar uma consulta?</h3>
+        <p>Pelo telefone (81) 9656-4808 ou pelo e-mail a0939805330@gmail.com. Informe nome, especialidade desejada e sua disponibilidade de dias e horários.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Atendem crianças e adultos?</h3>
+        <p>Sim. Temos Pediatria para crianças e adolescentes, e Clínica Médica, Ginecologia, Obstetrícia, Psiquiatria e Medicina do Trabalho para adultos.</p>
+      </div>
+      <div class="faq-item">
+        <h3>A clínica atende urgências?</h3>
+        <p>Realizamos atendimento ambulatorial com agendamento prévio. Em casos de urgência ou emergência, procure uma UPA, hospital ou serviço de emergência médica (SAMU 192).</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quais documentos levar à consulta?</h3>
+        <p>Documento de identidade com foto, cartão ou relatórios médicos anteriores (se houver) e lista de medicamentos em uso.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Posso remarcar minha consulta?</h3>
+        <p>Sim. Entre em contato pelos canais informados com a antecedência possível para verificarmos nova disponibilidade.</p>
+      </div>
+      <div class="faq-item">
+        <h3>A clínica atende plano de saúde?</h3>
+        <p>Trabalhamos com atendimento particular. Informações sobre formas de pagamento podem ser obtidas no momento do agendamento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contato">
+  <div class="container">
+    <div class="section-label">Contato</div>
+    <h2>Fale com a gente.</h2>
+    <p class="lead">Estamos prontos para tirar suas dúvidas e agendar seu atendimento.</p>
+    <div class="contato-grid">
+      <div class="contato-block">
+        <h3>Endereço</h3>
+        <p>R. Tenente Manoel Barbosa da Silva, 70<br>Centro — Cabo de Santo Agostinho/PE<br>CEP 54.510-005</p>
+      </div>
+      <div class="contato-block">
+        <h3>Canais de Atendimento</h3>
+        <p><strong>Telefone:</strong> (81) 9656-4808</p>
+        <p><strong>E-mail:</strong> <a href="mailto:a0939805330@gmail.com">a0939805330@gmail.com</a></p>
+        <p style="margin-top:12px"><strong>Horário:</strong> Segunda a sexta, 8h às 18h<br>Sábado, 8h às 12h</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Clínica Assistência Familiar</h4>
+        <p><strong style="color:#fff">Razão Social:</strong> Clinica Assistencia Familiar LTDA</p>
+        <p><strong style="color:#fff">CNPJ:</strong> 64.017.284/0001-01</p>
+        <p><strong style="color:#fff">Endereço:</strong> R. Tenente Manoel Barbosa da Silva, 70 — Centro, Cabo de Santo Agostinho/PE, CEP 54.510-005</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li>(81) 9656-4808</li>
+          <li>a0939805330@gmail.com</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+          <li><a href="termos.html">Termos de Uso</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      © 2026 Clinica Assistencia Familiar LTDA — CNPJ 64.017.284/0001-01 — Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
