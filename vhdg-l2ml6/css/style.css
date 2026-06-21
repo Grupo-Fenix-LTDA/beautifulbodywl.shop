@@ -18,11 +18,11 @@ img { display: block; max-width: 100%; height: auto; }
 button { border: 0; background: transparent; cursor: pointer; font-family: inherit; color: inherit; }
 
 /* Gate: esconde timer/pricing/comentários até o vídeo atingir 3606s.
-   JS em main.js remove a classe quando smartplayer.currentTime >= SECONDS_TO_DISPLAY. */
-.gated { display: none; }
+   JS em main.js remove a classe quando smartplayer.ktr5_currentTime >= SECONDS_TO_DISPLAY. */
+.ktr5_gated { display: none; }
 
 /* ---------- top attention bar ---------- */
-.attention-bar {
+.ktr5_attention-bar {
   background: #c61111;
   color: #fff;
   text-align: center;
@@ -32,12 +32,12 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
 }
 
 /* ---------- headline ---------- */
-.headline-section {
+.ktr5_headline-section {
   background: #000;
   padding: 40px 20px 20px;
   text-align: center;
 }
-.main-headline {
+.ktr5_main-headline {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 44px;
@@ -46,56 +46,56 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   max-width: 1100px;
   margin: 0 auto;
 }
-.hl-orange { color: #f49233; }
+.ktr5_hl-orange { color: #f49233; }
 
 /* ---------- video ---------- */
-.video-section { padding: 15px 0; background: #000; }
-.video-wrapper { max-width: 800px; margin: 0 auto; padding: 0 15px; }
-.video-embed {
+.ktr5_video-section { padding: 15px 0; background: #000; }
+.ktr5_video-wrapper { max-width: 800px; margin: 0 auto; padding: 0 15px; }
+.ktr5_video-embed {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
   background: #000;
 }
-.video-embed > img,
-.video-embed > div {
+.ktr5_video-embed > img,
+.ktr5_video-embed > div {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
 }
 #thumb_67de150abbdcf5aa029d7134 { object-fit: cover; }
-.video-backdrop {
+.ktr5_video-backdrop {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
 /* ---------- timer / countdown ---------- */
-.timer-section {
+.ktr5_timer-section {
   background: #414141;
   color: #fff;
   text-align: center;
   padding: 10px 20px 25px;
   position: relative;
 }
-/* ref: timer headline + countdown são .atomicat-heading-title → Poppins */
-.timer-section,
-.timer-section * {
+/* ref: timer headline + countdown são .ktr5_atomicat-heading-title → Poppins */
+.ktr5_timer-section,
+.ktr5_timer-section * {
   font-family: 'Poppins', sans-serif;
 }
-.timer-headline {
+.ktr5_timer-headline {
   color: #ffeb00;
   font-size: 36px;
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 8px;
 }
-.timer-countdown {
+.ktr5_timer-countdown {
   font-size: 48px;
   font-weight: 700;
   color: #fff;
   line-height: 1;
 }
-.timer-arrow {
+.ktr5_timer-arrow {
   position: absolute;
   bottom: -15px;
   left: 50%;
@@ -107,11 +107,11 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
 }
 
 /* ---------- pricing ---------- */
-.pricing-section {
+.ktr5_pricing-section {
   background: #ebebeb;
   padding: 40px 15px 50px;
 }
-.pricing-grid {
+.ktr5_pricing-grid {
   max-width: 1140px;
   margin: 0 auto;
   display: flex;
@@ -121,15 +121,15 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   flex-wrap: wrap;
 }
 /* Todos os elementos dentro do pricing grid usam Helvetica Neue
-   (= ref .pricing-wrapper *). Qualquer regra específica que usa outra
+   (= ref .ktr5_pricing-wrapper *). Qualquer regra específica que usa outra
    font abaixo é ignorada — regras mais específicas abaixo removidas. */
-.pricing-grid,
-.pricing-grid * {
+.ktr5_pricing-grid,
+.ktr5_pricing-grid * {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* base card */
-.card {
+.ktr5_card {
   flex: 0 1 300px;
   display: flex;
   flex-direction: column;
@@ -142,12 +142,12 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   text-align: center;
   position: relative;
 }
-.card:hover {
+.ktr5_card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,.12);
 }
 
-.card-header {
+.ktr5_card-header {
   background: #a6a6a6;
   color: #fff;
   font-weight: 700;
@@ -156,7 +156,7 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   padding: 8px;
   font-size: 18px;
 }
-.card-body {
+.ktr5_card-body {
   padding: 20px 18px;
   flex: 1;
   display: flex;
@@ -164,39 +164,39 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   justify-content: space-between;
   align-items: center;
 }
-.card-title {
+.ktr5_card-title {
   font-size: 19px;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.1;
 }
-.card-subtitle { color: #666; font-size: 14px; margin-bottom: 15px; }
-.bottle-img {
+.ktr5_card-subtitle { color: #666; font-size: 14px; margin-bottom: 15px; }
+.ktr5_bottle-img {
   max-width: 200px;
   margin: 10px auto 15px;
 }
 
-.price-row {
+.ktr5_price-row {
   margin: 15px 0 5px;
   display: inline-flex;
   align-items: baseline;
   gap: 4px;
   align-self: center;   
 }
-.price-currency { font-size: 32px; font-weight: 700; }
-.price-big {
+.ktr5_price-currency { font-size: 32px; font-weight: 700; }
+.ktr5_price-big {
   font-size: 52px;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -2px;
   color: #2b2b2b;
 }
-.price-unit { font-size: 12px; font-weight: 600; color: #2b2b2b; align-self: flex-end; margin-bottom: 12px; }
+.ktr5_price-unit { font-size: 12px; font-weight: 600; color: #2b2b2b; align-self: flex-end; margin-bottom: 12px; }
 
-.shipping-note { color: #666; font-size: 14px; margin: 5px 0 15px; }
+.ktr5_shipping-note { color: #666; font-size: 14px; margin: 5px 0 15px; }
 
 /* Buy buttons — match reference: retangular w/ cantos 6px, 16px font */
-.buy-btn {
+.ktr5_buy-btn {
   width: 100%;
   padding: 8px 0;
   border-radius: 6px;
@@ -211,29 +211,29 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   margin: 10px 0 2px;
   color: #000;
 }
-.cart-icon { width: 16px; height: 16px; }
+.ktr5_cart-icon { width: 16px; height: 16px; }
 
-.buy-btn-gray {
+.ktr5_buy-btn-gray {
   background: linear-gradient(180deg, #ccc 0, #e6e6e6 100%);
   border-color: #bbb;
   box-shadow: 0 4px 0 #a6a6a6;
 }
-.buy-btn-gray:active { box-shadow: 0 2px 0 #a6a6a6; transform: translateY(2px); }
+.ktr5_buy-btn-gray:active { box-shadow: 0 2px 0 #a6a6a6; transform: translateY(2px); }
 
-.buy-btn-gold {
+.ktr5_buy-btn-gold {
   background: linear-gradient(180deg, #fddb63 0, #fbc02d 100%);
   border-color: #eb4;
   box-shadow: 0 4px 0 #bc822c;
 }
-.buy-btn-gold:active { box-shadow: 0 2px 0 #bc822c; transform: translateY(2px); }
+.ktr5_buy-btn-gold:active { box-shadow: 0 2px 0 #bc822c; transform: translateY(2px); }
 
-.payment-icons {
+.ktr5_payment-icons {
   margin: 10px auto;
   max-width: 220px;
   height: auto;
 }
-.total-row { margin-top: 10px; font-weight: 800; font-size: 18px; color: #000; }
-.strike {
+.ktr5_total-row { margin-top: 10px; font-weight: 800; font-size: 18px; color: #000; }
+.ktr5_strike {
   text-decoration: line-through;
   text-decoration-color: #ee484e;
   -webkit-text-decoration-color: #ee484e;
@@ -244,14 +244,14 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
 }
 
 /* Badges — match reference: border-radius 5px, 10px font, tight padding */
-.badges-container {
+.ktr5_badges-container {
   width: 80%;
   margin: 10px auto 8px;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.badge {
+.ktr5_badge {
   padding: 4px 2px;
   border-radius: 5px;
   font-size: 10px;
@@ -264,24 +264,24 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   gap: 5px;
   box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
-.badge-icon {
+.ktr5_badge-icon {
   width: 10px;
   height: 10px;
   flex-shrink: 0;
   fill: currentColor;
 }
-.badge-vip      { background-color: #ee484e; }
-.badge-bonus    { background-color: #000; }
-.badge-shipping { background-color: #4a8b6c; }
+.ktr5_badge-vip      { background-color: #ee484e; }
+.ktr5_badge-bonus    { background-color: #000; }
+.ktr5_badge-shipping { background-color: #4a8b6c; }
 
 /* Highlight card (6 bottles) */
-.card-highlight {
+.ktr5_card-highlight {
   background: linear-gradient(180deg, #fae7b8 0, #fef6e0 100%);
   border: 3px solid #000;
   transform: scale(1.05);
 }
-.card-highlight:hover { transform: scale(1.07) translateY(-2px); }
-.card-ribbon {
+.ktr5_card-highlight:hover { transform: scale(1.07) translateY(-2px); }
+.ktr5_card-ribbon {
   background: #ee484e;
   color: #fff;
   font-weight: 700;
@@ -292,8 +292,8 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
 }
 
 /* Gold button arrow animation (👈🏻) */
-.card-highlight .buy-btn-gold { position: relative; overflow: visible; }
-.card-highlight .buy-btn-gold::after {
+.ktr5_card-highlight .ktr5_buy-btn-gold { position: relative; overflow: visible; }
+.ktr5_card-highlight .ktr5_buy-btn-gold::after {
   content: "👈🏻";
   position: absolute;
   right: -12px;
@@ -312,24 +312,24 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
 }
 
 /* ---------- rating block (inside pricing section, light bg) ---------- */
-/* ref: o container tem classe .atomicat-text que define font-family: Roboto.
+/* ref: o container tem classe .ktr5_atomicat-text que define font-family: Roboto.
    O <p> filho herda. Cor do texto = #1C1E21. */
-.rating-block,
-.rating-block * {
+.ktr5_rating-block,
+.ktr5_rating-block * {
   font-family: 'Roboto', sans-serif;
   color: #1C1E21;
 }
-.rating-block {
+.ktr5_rating-block {
   max-width: 1140px;
   margin: 40px auto 0;
   text-align: center;
 }
-.rating-title {
+.ktr5_rating-title {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 5px;
 }
-.rating-line {
+.ktr5_rating-line {
   font-size: 24px;
   font-weight: 700;
   text-shadow: 0 1px 0 #000;
@@ -339,13 +339,13 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   gap: 6px;
   margin-bottom: 3px;
 }
-.stars { font-size: 22px; text-shadow: none; }
-.rating-value { }
-.rating-subtitle { font-size: 16px; font-weight: 400; text-shadow: none; }
+.ktr5_stars { font-size: 22px; text-shadow: none; }
+.ktr5_rating-value { }
+.ktr5_rating-subtitle { font-size: 16px; font-weight: 400; text-shadow: none; }
 
 /* ---------- comments section (= ref nested en-US HTML) ----------
    CSS vars herdadas da ref :root; valores tirados direto do HTML de referência */
-.comments-section {
+.ktr5_comments-section {
   --surface: #f0f2f5;     /* bubble bg */
   --stroke: rgba(0,0,0,.06);
   --muted: #8a8d91;       /* meta text */
@@ -364,7 +364,7 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   color: #1c1e21;
 }
-.comments {
+.ktr5_comments {
   /* 3 cards × 300px + 2 gaps × 25px = 950px (largura visual do pricing row) */
   max-width: 950px;
   margin: 0 auto;
@@ -374,13 +374,13 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   overflow: hidden;
   padding: var(--pad);
 }
-.comment {
+.ktr5_comment {
   display: flex;
   gap: var(--gap);
   margin-bottom: 16px;
 }
-.comment-reply { margin-left: 45px; }
-.comment-avatar {
+.ktr5_comment-reply { margin-left: 45px; }
+.ktr5_comment-avatar {
   width: var(--avatar);
   height: var(--avatar);
   border-radius: 999px;
@@ -388,8 +388,8 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   object-fit: cover;
   background: #e9eaec;
 }
-.comment-content { flex: 1; min-width: 0; }
-.comment-bubble {
+.ktr5_comment-content { flex: 1; min-width: 0; }
+.ktr5_comment-bubble {
   background: var(--surface);
   padding: var(--bubble-pad-y) var(--bubble-pad-x);
   border-radius: var(--radius);
@@ -397,14 +397,14 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   max-width: 100%;
   line-height: 1.25;
 }
-.comment-name {
+.ktr5_comment-name {
   color: #050505;
   font-weight: 600;
   font-size: var(--name-size);
   margin-right: 6px;
   white-space: nowrap;
 }
-.comment-text {
+.ktr5_comment-text {
   margin-top: 4px;
   font-size: var(--text-size);
   line-height: 1.3333;
@@ -413,7 +413,7 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   word-wrap: break-word;
   overflow-wrap: anywhere;
 }
-.comment-meta {
+.ktr5_comment-meta {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -422,7 +422,7 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   color: var(--muted);
   flex-wrap: wrap;
 }
-.comment-meta .reactions {
+.ktr5_comment-meta .ktr5_reactions {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -432,11 +432,11 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   padding: 2px 8px 2px 4px;
   flex: 0 0 auto;
   color: var(--muted);
-  font-weight: 800;                 /* = ref .rx-count font-weight */
+  font-weight: 800;                 /* = ref .ktr5_rx-count font-weight */
   font-size: 12px;
 }
 /* ref: svg vai dentro de .rx (16x16 com borda + bg branco — deixa o ícone "grosso") */
-.like-icon {
+.ktr5_like-icon {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
@@ -448,30 +448,30 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
 
 /* ---------- responsive ---------- */
 @media (max-width: 768px) {
-  .main-headline { font-size: 32px; }
-  .timer-headline { font-size: 22px; }
-  .timer-countdown { font-size: 44px; }
-  .pricing-grid { gap: 15px; }
-  .card-highlight { transform: scale(1); }
-  .card-highlight:hover { transform: translateY(-2px); }
-  .comment-reply { margin-left: 25px; }
+  .ktr5_main-headline { font-size: 32px; }
+  .ktr5_timer-headline { font-size: 22px; }
+  .ktr5_timer-countdown { font-size: 44px; }
+  .ktr5_pricing-grid { gap: 15px; }
+  .ktr5_card-highlight { transform: scale(1); }
+  .ktr5_card-highlight:hover { transform: translateY(-2px); }
+  .ktr5_comment-reply { margin-left: 25px; }
 }
 @media (max-width: 480px) {
-  .attention-bar { font-size: 13px; padding: 10px; }
-  .main-headline { font-size: 26px; }
-  .headline-section { padding: 25px 15px 10px; }
-  .timer-headline { font-size: 18px; }
-  .timer-countdown { font-size: 36px; }
-  .pricing-grid {
+  .ktr5_attention-bar { font-size: 13px; padding: 10px; }
+  .ktr5_main-headline { font-size: 26px; }
+  .ktr5_headline-section { padding: 25px 15px 10px; }
+  .ktr5_timer-headline { font-size: 18px; }
+  .ktr5_timer-countdown { font-size: 36px; }
+  .ktr5_pricing-grid {
     flex-direction: column;
     align-items: center;
     padding: 0 5px;
   }
-  .pricing-grid .card:nth-child(1) { order: 3; }
-  .pricing-grid .card:nth-child(2) { order: 1; }
-  .pricing-grid .card:nth-child(3) { order: 2; }
-  .card { flex: 1 1 100%; max-width: 380px; width: 100%; }
-  .price-big { font-size: 60px; }
-  .card-highlight .buy-btn-gold::after { font-size: 32px; right: -8px; }
-  .video-wrapper { padding: 0 5px; }
+  .ktr5_pricing-grid .ktr5_card:nth-child(1) { order: 3; }
+  .ktr5_pricing-grid .ktr5_card:nth-child(2) { order: 1; }
+  .ktr5_pricing-grid .ktr5_card:nth-child(3) { order: 2; }
+  .ktr5_card { flex: 1 1 100%; max-width: 380px; width: 100%; }
+  .ktr5_price-big { font-size: 60px; }
+  .ktr5_card-highlight .ktr5_buy-btn-gold::after { font-size: 32px; right: -8px; }
+  .ktr5_video-wrapper { padding: 0 5px; }
 }
